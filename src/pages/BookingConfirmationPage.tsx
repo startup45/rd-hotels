@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { format } from 'date-fns';
-import { Check, Calendar, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Check, Calendar, MapPin, Phone, Mail, ArrowRight, Users } from 'lucide-react';
 
 const BookingConfirmationPage = () => {
   const location = useLocation();
