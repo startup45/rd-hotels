@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Calendar, Users, MapPin, SquareIcon } from "lucide-react";
+import { Calendar, Users, MapPin, SquareIcon, Check } from "lucide-react";
 
 const EventsPage = () => {
   return (
@@ -153,23 +153,23 @@ const EventsPage = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
                   <p>Customizable wedding packages</p>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
                   <p>Elegant venues with stunning backdrops</p>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
                   <p>Expert coordination for seamless ceremonies</p>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
                   <p>Exquisite catering with customizable menus</p>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
                   <p>Special accommodation rates for guests</p>
                 </div>
               </div>
