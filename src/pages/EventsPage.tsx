@@ -1,6 +1,14 @@
 
 import { Link } from "react-router-dom";
-import { Calendar, Users, MapPin, SquareIcon, Check } from "lucide-react";
+import { Calendar, Users, MapPin, SquareIcon, Check, Images } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const EventsPage = () => {
   return (
@@ -24,6 +32,76 @@ const EventsPage = () => {
               Host your special occasions in our elegant venues, equipped with modern amenities and supported by our dedicated event planning team.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Carousel */}
+      <section className="py-12 bg-white">
+        <div className="container-custom">
+          <div className="flex items-center gap-2 mb-8">
+            <Images className="h-6 w-6 text-gold" />
+            <h2 className="text-3xl font-serif font-bold">Event Gallery</h2>
+          </div>
+          <p className="text-gray-600 mb-8">
+            Browse through our beautiful event spaces and successful celebrations hosted at RD Hotels.
+          </p>
+          
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              <CarouselItem>
+                <AspectRatio ratio={16/9} className="bg-muted">
+                  <img 
+                    src="https://source.unsplash.com/photo-1519167758481-83f550bb49b3" 
+                    alt="Elegant wedding setup in our grand ballroom" 
+                    className="rounded-md object-cover w-full h-full"
+                  />
+                </AspectRatio>
+                <p className="text-center text-gray-600 mt-2">Elegant wedding setup in our grand ballroom</p>
+              </CarouselItem>
+              <CarouselItem>
+                <AspectRatio ratio={16/9} className="bg-muted">
+                  <img 
+                    src="https://source.unsplash.com/photo-1517457373958-b7bdd4587205" 
+                    alt="Corporate conference setup with modern amenities" 
+                    className="rounded-md object-cover w-full h-full"
+                  />
+                </AspectRatio>
+                <p className="text-center text-gray-600 mt-2">Corporate conference setup with modern amenities</p>
+              </CarouselItem>
+              <CarouselItem>
+                <AspectRatio ratio={16/9} className="bg-muted">
+                  <img 
+                    src="https://source.unsplash.com/photo-1464366400600-7168b8af9bc3" 
+                    alt="Romantic wedding ceremony" 
+                    className="rounded-md object-cover w-full h-full"
+                  />
+                </AspectRatio>
+                <p className="text-center text-gray-600 mt-2">Romantic wedding ceremony setup</p>
+              </CarouselItem>
+              <CarouselItem>
+                <AspectRatio ratio={16/9} className="bg-muted">
+                  <img 
+                    src="https://source.unsplash.com/photo-1562008752-2914d3a8e809" 
+                    alt="Banquet hall setup for a gala dinner" 
+                    className="rounded-md object-cover w-full h-full"
+                  />
+                </AspectRatio>
+                <p className="text-center text-gray-600 mt-2">Banquet hall setup for a gala dinner</p>
+              </CarouselItem>
+              <CarouselItem>
+                <AspectRatio ratio={16/9} className="bg-muted">
+                  <img 
+                    src="https://source.unsplash.com/photo-1621275471769-e6aa44d5a483" 
+                    alt="Social event with elaborate decorations" 
+                    className="rounded-md object-cover w-full h-full"
+                  />
+                </AspectRatio>
+                <p className="text-center text-gray-600 mt-2">Social event with elaborate decorations</p>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
         </div>
       </section>
 
