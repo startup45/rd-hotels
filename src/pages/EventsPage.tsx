@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Calendar, Users, MapPin, SquareFeet, CheckCircle } from "lucide-react";
+import { Calendar, Users, MapPin, SquareIcon } from "lucide-react";
 
 const EventsPage = () => {
   return (
@@ -52,7 +52,7 @@ const EventsPage = () => {
                     <span>Capacity: 300 guests</span>
                   </div>
                   <div className="flex items-center text-sm">
-                    <SquareFeet className="h-4 w-4 text-gold mr-1" />
+                    <SquareIcon className="h-4 w-4 text-gold mr-1" />
                     <span>5000 sq ft</span>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ const EventsPage = () => {
                     <span>Capacity: 150 guests</span>
                   </div>
                   <div className="flex items-center text-sm">
-                    <SquareFeet className="h-4 w-4 text-gold mr-1" />
+                    <SquareIcon className="h-4 w-4 text-gold mr-1" />
                     <span>2500 sq ft</span>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const EventsPage = () => {
                     <span>Capacity: 80 guests</span>
                   </div>
                   <div className="flex items-center text-sm">
-                    <SquareFeet className="h-4 w-4 text-gold mr-1" />
+                    <SquareIcon className="h-4 w-4 text-gold mr-1" />
                     <span>1200 sq ft</span>
                   </div>
                 </div>
