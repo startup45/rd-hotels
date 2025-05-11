@@ -10,7 +10,7 @@ const ContactPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1566073771259-6a8506099945')`,
+            backgroundImage: `url('https://source.unsplash.com/photo-1566665797739-1674de7a421a')`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />

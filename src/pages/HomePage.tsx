@@ -38,7 +38,7 @@ const HomePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1487958449943-2429e8be8625')`,
+            backgroundImage: `url('https://source.unsplash.com/photo-1542314831-068cd1dbfeeb')`,
             backgroundPosition: 'center',
           }}
         >

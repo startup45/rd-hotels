@@ -86,7 +86,7 @@ const AmenitiesPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1578683010236-d716f9a3f461')`,
+            backgroundImage: `url('https://source.unsplash.com/photo-1551882547-ff40c63fe5fa')`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />

@@ -10,7 +10,7 @@ const DiningPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1514933651103-005eec06c04b')`,
+            backgroundImage: `url('https://source.unsplash.com/photo-1517248135467-4c7edcad34c4')`,
           }}
         >
           <div className="absolute inset-0 bg-black/60" />

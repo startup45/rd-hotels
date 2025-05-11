@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1496417263034-38ec4f0b665a')`,
+            backgroundImage: `url('https://source.unsplash.com/photo-1590381105924-c72589b9ef3f')`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
