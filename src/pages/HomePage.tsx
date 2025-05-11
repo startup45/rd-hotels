@@ -38,7 +38,7 @@ const HomePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1542314831-068cd1dbfeeb')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070')`,
             backgroundPosition: 'center',
           }}
         >
@@ -73,7 +73,7 @@ const HomePage = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105">
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="https://source.unsplash.com/photo-1649972904349-6e44c42644a7" 
+                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070" 
                   alt="Luxurious Room" 
                   className="w-full h-full object-cover"
                 />
@@ -96,7 +96,7 @@ const HomePage = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105">
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="https://source.unsplash.com/photo-1483058712412-4245e9b90334" 
+                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=2070" 
                   alt="Restaurant" 
                   className="w-full h-full object-cover"
                 />
@@ -119,7 +119,7 @@ const HomePage = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105">
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="https://source.unsplash.com/photo-1472396961693-142e6e269027" 
+                  src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=2070" 
                   alt="Events" 
                   className="w-full h-full object-cover"
                 />
@@ -163,7 +163,7 @@ const HomePage = () => {
             <div className="order-1 lg:order-2">
               <div className="relative">
                 <img 
-                  src="https://source.unsplash.com/photo-1721322800607-8c38375eef04" 
+                  src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=2074" 
                   alt="RD Hotels Interior" 
                   className="rounded-lg shadow-lg"
                 />
@@ -231,7 +231,7 @@ const HomePage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1487958449943-2429e8be8625')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070')`,
           }}
         >
           <div className="absolute inset-0 bg-maroon/80" />

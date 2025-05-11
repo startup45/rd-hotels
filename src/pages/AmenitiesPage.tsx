@@ -86,7 +86,7 @@ const AmenitiesPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1551882547-ff40c63fe5fa')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070')`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
@@ -221,7 +221,7 @@ const AmenitiesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <img 
-                src="https://source.unsplash.com/photo-1577059023365-987129449762" 
+                src="https://images.unsplash.com/photo-1577059023365-987129449762?q=80&w=2070" 
                 alt="Family Services" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />

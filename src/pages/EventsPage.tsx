@@ -1,14 +1,7 @@
 
-import { Link } from "react-router-dom";
-import { Calendar, Users, MapPin, SquareIcon, Check, Images } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Link } from 'react-router-dom';
+import { CalendarDays, Users, Check, MapPin } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const EventsPage = () => {
   return (
@@ -18,416 +11,417 @@ const EventsPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1469371670807-013ccf25f16a')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098')`,
           }}
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative container-custom">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-              Events & Conferences
+              Events & Celebrations
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              Host your special occasions in our elegant venues, equipped with modern amenities and supported by our dedicated event planning team.
+              Create unforgettable moments in our versatile venues perfect for weddings, corporate events, and special occasions.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Photo Gallery Carousel */}
-      <section className="py-12 bg-white">
-        <div className="container-custom">
-          <div className="flex items-center gap-2 mb-8">
-            <Images className="h-6 w-6 text-gold" />
-            <h2 className="text-3xl font-serif font-bold">Event Gallery</h2>
-          </div>
-          <p className="text-gray-600 mb-8">
-            Browse through our beautiful event spaces and successful celebrations hosted at RD Hotels.
-          </p>
-          
-          <Carousel className="w-full max-w-5xl mx-auto">
-            <CarouselContent>
-              <CarouselItem>
-                <AspectRatio ratio={16/9} className="bg-muted">
-                  <img 
-                    src="https://source.unsplash.com/photo-1519167758481-83f550bb49b3" 
-                    alt="Elegant wedding setup in our grand ballroom" 
-                    className="rounded-md object-cover w-full h-full"
-                  />
-                </AspectRatio>
-                <p className="text-center text-gray-600 mt-2">Elegant wedding setup in our grand ballroom</p>
-              </CarouselItem>
-              <CarouselItem>
-                <AspectRatio ratio={16/9} className="bg-muted">
-                  <img 
-                    src="https://source.unsplash.com/photo-1517457373958-b7bdd4587205" 
-                    alt="Corporate conference setup with modern amenities" 
-                    className="rounded-md object-cover w-full h-full"
-                  />
-                </AspectRatio>
-                <p className="text-center text-gray-600 mt-2">Corporate conference setup with modern amenities</p>
-              </CarouselItem>
-              <CarouselItem>
-                <AspectRatio ratio={16/9} className="bg-muted">
-                  <img 
-                    src="https://source.unsplash.com/photo-1464366400600-7168b8af9bc3" 
-                    alt="Romantic wedding ceremony" 
-                    className="rounded-md object-cover w-full h-full"
-                  />
-                </AspectRatio>
-                <p className="text-center text-gray-600 mt-2">Romantic wedding ceremony setup</p>
-              </CarouselItem>
-              <CarouselItem>
-                <AspectRatio ratio={16/9} className="bg-muted">
-                  <img 
-                    src="https://source.unsplash.com/photo-1562008752-2914d3a8e809" 
-                    alt="Banquet hall setup for a gala dinner" 
-                    className="rounded-md object-cover w-full h-full"
-                  />
-                </AspectRatio>
-                <p className="text-center text-gray-600 mt-2">Banquet hall setup for a gala dinner</p>
-              </CarouselItem>
-              <CarouselItem>
-                <AspectRatio ratio={16/9} className="bg-muted">
-                  <img 
-                    src="https://source.unsplash.com/photo-1621275471769-e6aa44d5a483" 
-                    alt="Social event with elaborate decorations" 
-                    className="rounded-md object-cover w-full h-full"
-                  />
-                </AspectRatio>
-                <p className="text-center text-gray-600 mt-2">Social event with elaborate decorations</p>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious className="left-2" />
-            <CarouselNext className="right-2" />
-          </Carousel>
-        </div>
-      </section>
-
-      {/* Venues Overview */}
+      {/* Event Spaces Section */}
       <section className="py-16 bg-ivory">
         <div className="container-custom">
           <h2 className="section-title text-center mx-auto mb-12">Our Event Spaces</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Grand Ballroom */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src="https://source.unsplash.com/photo-1519167758481-83f550bb49b3" 
-                  alt="Grand Ballroom" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-2xl mb-2">Grand Ballroom</h3>
-                <p className="text-gray-600 mb-4">Perfect for weddings, galas, and large corporate events with elegant decor and state-of-the-art facilities.</p>
-                
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <div className="flex items-center text-sm">
-                    <Users className="h-4 w-4 text-gold mr-1" />
-                    <span>Capacity: 300 guests</span>
-                  </div>
-                  <div className="flex items-center text-sm">
-                    <SquareIcon className="h-4 w-4 text-gold mr-1" />
-                    <span>5000 sq ft</span>
-                  </div>
-                </div>
-                
-                <Link 
-                  to="#grand-ballroom-details" 
-                  className="text-center py-2 border-2 border-maroon text-maroon font-medium rounded transition-colors hover:bg-maroon hover:text-white w-full block"
-                >
-                  View Details
-                </Link>
-              </div>
-            </div>
+          <Tabs defaultValue="banquet" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
+              <TabsTrigger value="banquet" className="text-lg">Banquet Hall</TabsTrigger>
+              <TabsTrigger value="conference" className="text-lg">Conference Rooms</TabsTrigger>
+              <TabsTrigger value="outdoor" className="text-lg">Outdoor Space</TabsTrigger>
+            </TabsList>
             
-            {/* Conference Hall */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src="https://source.unsplash.com/photo-1517457373958-b7bdd4587205" 
-                  alt="Conference Hall" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-2xl mb-2">Conference Hall</h3>
-                <p className="text-gray-600 mb-4">Ideal for business meetings, seminars, and presentations with professional setup and tech support.</p>
-                
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <div className="flex items-center text-sm">
-                    <Users className="h-4 w-4 text-gold mr-1" />
-                    <span>Capacity: 150 guests</span>
+            <TabsContent value="banquet" className="focus-visible:outline-none">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1">
+                  <h3 className="text-2xl font-serif mb-4">Grand Celebration Hall</h3>
+                  <p className="text-gray-700 mb-6">
+                    Our largest venue features elegant décor, state-of-the-art lighting, and premium sound systems ideal for weddings, galas and large celebrations. The versatile space can be configured in various layouts to suit your specific requirements.
+                  </p>
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Location:</p>
+                        <p className="text-gray-600">Ground Floor, East Wing</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <Users className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Capacity:</p>
+                        <p className="text-gray-600">
+                          Theatre Style: 300 guests<br />
+                          Banquet Style: 200 guests<br />
+                          Reception Style: 350 guests
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Amenities:</p>
+                        <p className="text-gray-600">High-speed WiFi, Premium AV equipment, Stage, Dance floor, Custom lighting</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center text-sm">
-                    <SquareIcon className="h-4 w-4 text-gold mr-1" />
-                    <span>2500 sq ft</span>
-                  </div>
+                  <Link 
+                    to="/contact" 
+                    className="bg-maroon hover:bg-maroon-dark text-white px-6 py-3 rounded transition-colors duration-300 inline-flex items-center"
+                  >
+                    Inquire About Booking
+                  </Link>
                 </div>
-                
-                <Link 
-                  to="#conference-hall-details" 
-                  className="text-center py-2 border-2 border-maroon text-maroon font-medium rounded transition-colors hover:bg-maroon hover:text-white w-full block"
-                >
-                  View Details
-                </Link>
+                <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098" 
+                    alt="Grand Celebration Hall" 
+                    className="w-full h-96 object-cover"
+                  />
+                </div>
               </div>
-            </div>
+            </TabsContent>
             
-            {/* Banquet Hall */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src="https://source.unsplash.com/photo-1562008752-2914d3a8e809" 
-                  alt="Banquet Hall" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-2xl mb-2">Banquet Hall</h3>
-                <p className="text-gray-600 mb-4">Suitable for intimate celebrations, family gatherings, and small corporate events in a warm ambiance.</p>
-                
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <div className="flex items-center text-sm">
-                    <Users className="h-4 w-4 text-gold mr-1" />
-                    <span>Capacity: 80 guests</span>
+            <TabsContent value="conference" className="focus-visible:outline-none">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1">
+                  <h3 className="text-2xl font-serif mb-4">Executive Conference Rooms</h3>
+                  <p className="text-gray-700 mb-6">
+                    Our three professionally designed conference rooms offer sophisticated environments for business meetings, workshops, and corporate events. Each room is equipped with the latest technology to ensure productive and seamless presentations.
+                  </p>
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Location:</p>
+                        <p className="text-gray-600">First Floor, Business Center</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <Users className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Capacity:</p>
+                        <p className="text-gray-600">
+                          Boardroom Style: 20-40 guests<br />
+                          U-Shape: 15-30 guests<br />
+                          Classroom Style: 25-50 guests
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Amenities:</p>
+                        <p className="text-gray-600">Video conferencing, Interactive displays, Whiteboard walls, Ergonomic seating, Coffee service</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center text-sm">
-                    <SquareIcon className="h-4 w-4 text-gold mr-1" />
-                    <span>1200 sq ft</span>
-                  </div>
+                  <Link 
+                    to="/contact" 
+                    className="bg-maroon hover:bg-maroon-dark text-white px-6 py-3 rounded transition-colors duration-300 inline-flex items-center"
+                  >
+                    Inquire About Booking
+                  </Link>
                 </div>
-                
-                <Link 
-                  to="#banquet-hall-details" 
-                  className="text-center py-2 border-2 border-maroon text-maroon font-medium rounded transition-colors hover:bg-maroon hover:text-white w-full block"
-                >
-                  View Details
-                </Link>
+                <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?q=80&w=2125" 
+                    alt="Executive Conference Room" 
+                    className="w-full h-96 object-cover"
+                  />
+                </div>
               </div>
-            </div>
-          </div>
+            </TabsContent>
+            
+            <TabsContent value="outdoor" className="focus-visible:outline-none">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1">
+                  <h3 className="text-2xl font-serif mb-4">Garden Terrace</h3>
+                  <p className="text-gray-700 mb-6">
+                    Our beautifully landscaped garden terrace offers a serene outdoor setting for cocktail receptions, intimate weddings, and social gatherings. The space features lush greenery, ambient lighting, and spectacular views, creating a magical atmosphere for your event.
+                  </p>
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-start">
+                      <MapPin className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Location:</p>
+                        <p className="text-gray-600">Fourth Floor, Rooftop</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <Users className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Capacity:</p>
+                        <p className="text-gray-600">
+                          Standing Reception: 150 guests<br />
+                          Seated Dinner: 100 guests<br />
+                          Ceremony: 120 guests
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
+                      <div>
+                        <p className="font-medium">Amenities:</p>
+                        <p className="text-gray-600">Weather contingency plans, Outdoor sound system, String lighting, Portable bars, Covered sections</p>
+                      </div>
+                    </div>
+                  </div>
+                  <Link 
+                    to="/contact" 
+                    className="bg-maroon hover:bg-maroon-dark text-white px-6 py-3 rounded transition-colors duration-300 inline-flex items-center"
+                  >
+                    Inquire About Booking
+                  </Link>
+                </div>
+                <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070" 
+                    alt="Garden Terrace" 
+                    className="w-full h-96 object-cover"
+                  />
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
-      {/* Wedding Section */}
+      {/* Event Types */}
       <section className="py-16 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://source.unsplash.com/photo-1464366400600-7168b8af9bc3" 
-                alt="Wedding Venue" 
-                className="rounded-lg shadow-lg w-full h-auto"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl font-serif font-bold mb-4">Dream Weddings</h2>
-              <p className="text-gray-700 mb-6">
-                Make your special day truly memorable at RD Hotels. Our dedicated wedding planning team ensures every detail is perfect, from decoration to catering, creating an experience that reflects your unique love story.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
-                  <p>Customizable wedding packages</p>
-                </div>
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
-                  <p>Elegant venues with stunning backdrops</p>
-                </div>
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
-                  <p>Expert coordination for seamless ceremonies</p>
-                </div>
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
-                  <p>Exquisite catering with customizable menus</p>
-                </div>
-                <div className="flex items-start">
-                  <Check className="h-5 w-5 mr-3 text-gold mt-0.5" />
-                  <p>Special accommodation rates for guests</p>
-                </div>
+          <h2 className="section-title text-center mx-auto mb-12">Perfect for Every Occasion</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-ivory p-8 rounded-lg shadow-md text-center">
+              <div className="rounded-full bg-maroon/10 w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069" 
+                  alt="Wedding Icon" 
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
-              <Link 
-                to="#wedding-inquiry" 
-                className="bg-maroon hover:bg-maroon-dark text-white px-6 py-3 rounded transition-colors duration-300 inline-flex items-center"
-              >
-                Plan Your Wedding
+              <h3 className="font-serif text-xl mb-3">Weddings</h3>
+              <p className="text-gray-600 mb-4">
+                Create the wedding of your dreams with our customizable packages, gourmet catering, and dedicated wedding coordinator.
+              </p>
+              <ul className="text-sm space-y-2 text-left mb-6">
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Complete wedding planning services</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Custom menu creation</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Decoration and floral arrangements</span>
+                </li>
+              </ul>
+              <Link to="/contact" className="text-maroon font-medium hover:text-maroon-dark">
+                Learn More →
+              </Link>
+            </div>
+            
+            <div className="bg-ivory p-8 rounded-lg shadow-md text-center">
+              <div className="rounded-full bg-maroon/10 w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070" 
+                  alt="Corporate Event Icon" 
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <h3 className="font-serif text-xl mb-3">Corporate Events</h3>
+              <p className="text-gray-600 mb-4">
+                Host successful business meetings, conferences, and team-building events with our professional facilities and service.
+              </p>
+              <ul className="text-sm space-y-2 text-left mb-6">
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Full technical support</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Breakout session rooms</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Executive catering packages</span>
+                </li>
+              </ul>
+              <Link to="/contact" className="text-maroon font-medium hover:text-maroon-dark">
+                Learn More →
+              </Link>
+            </div>
+            
+            <div className="bg-ivory p-8 rounded-lg shadow-md text-center">
+              <div className="rounded-full bg-maroon/10 w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2070" 
+                  alt="Social Event Icon" 
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <h3 className="font-serif text-xl mb-3">Social Celebrations</h3>
+              <p className="text-gray-600 mb-4">
+                Mark special milestones with family and friends in our elegant venues, perfect for birthdays, anniversaries, and reunions.
+              </p>
+              <ul className="text-sm space-y-2 text-left mb-6">
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Customizable celebration packages</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Entertainment coordination</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-4 w-4 text-gold mr-2 mt-0.5" />
+                  <span>Special accommodation rates for guests</span>
+                </li>
+              </ul>
+              <Link to="/contact" className="text-maroon font-medium hover:text-maroon-dark">
+                Learn More →
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Corporate Events */}
+      {/* Services & Packages */}
       <section className="py-16 bg-ivory">
         <div className="container-custom">
-          <h2 className="section-title text-center mx-auto mb-12">Corporate Events</h2>
+          <h2 className="section-title text-center mx-auto mb-4">Event Services</h2>
+          <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+            Our experienced event planning team ensures every detail is perfectly executed, creating memorable experiences for you and your guests.
+          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="font-serif text-xl mb-4">Business Meetings</h3>
-              <p className="text-gray-600 mb-4">
-                Professionally equipped spaces for productive business discussions and decision-making sessions.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Boardroom setup with A/V equipment
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  High-speed internet access
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Presentation tools and stationery
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Refreshments and catering options
-                </li>
-              </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2024" 
+                alt="Event Planning Team" 
+                className="rounded-lg shadow-lg"
+              />
             </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="font-serif text-xl mb-4">Conferences & Seminars</h3>
-              <p className="text-gray-600 mb-4">
-                Versatile venues for knowledge sharing, networking, and professional development programs.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Flexible seating arrangements
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Advanced sound and projection systems
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Registration and exhibit areas
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Customizable break sessions
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="font-serif text-xl mb-4">Team Retreats</h3>
-              <p className="text-gray-600 mb-4">
-                Create meaningful connections and boost team morale with our specially designed retreat packages.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Team-building activities
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Recreational facilities access
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Special group dining options
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gold mr-2">•</span>
-                  Accommodation packages
-                </li>
-              </ul>
+            <div>
+              <h3 className="font-serif text-2xl mb-6">Comprehensive Event Support</h3>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded shadow-sm">
+                  <h4 className="font-medium text-lg mb-2">Dedicated Event Coordinator</h4>
+                  <p className="text-gray-600">
+                    Your personal point of contact throughout the planning process and event execution
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded shadow-sm">
+                  <h4 className="font-medium text-lg mb-2">Gourmet Catering</h4>
+                  <p className="text-gray-600">
+                    Customizable menus featuring international and local cuisine prepared by our executive chefs
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded shadow-sm">
+                  <h4 className="font-medium text-lg mb-2">Audiovisual Excellence</h4>
+                  <p className="text-gray-600">
+                    State-of-the-art sound, lighting, and presentation equipment with technical support
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded shadow-sm">
+                  <h4 className="font-medium text-lg mb-2">Décor & Setup</h4>
+                  <p className="text-gray-600">
+                    Customized room layouts, elegant table settings, and themed decoration options
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Event Inquiry Form */}
-      <section id="wedding-inquiry" className="py-16 bg-white">
-        <div className="container-custom max-w-3xl">
-          <h2 className="section-title text-center mx-auto mb-8">Event Inquiry</h2>
-          <p className="text-center text-gray-600 mb-8">
-            Fill out the form below and our events team will contact you to discuss your specific requirements.
-          </p>
+      {/* Upcoming Events */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <h2 className="section-title text-center mx-auto mb-12">Upcoming Public Events</h2>
           
-          <form className="bg-ivory p-8 rounded-lg shadow-md">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                <input 
-                  type="text" 
-                  id="fullName" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-ivory rounded-lg overflow-hidden shadow-md">
+              <div className="h-48">
+                <img 
+                  src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2070" 
+                  alt="New Year's Eve Gala" 
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon"
-                />
-              </div>
-              <div>
-                <label htmlFor="eventType" className="block text-sm font-medium text-gray-700 mb-1">Event Type</label>
-                <select 
-                  id="eventType" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon"
-                >
-                  <option value="">Select Event Type</option>
-                  <option value="wedding">Wedding</option>
-                  <option value="corporate">Corporate Event</option>
-                  <option value="birthday">Birthday/Anniversary</option>
-                  <option value="social">Social Gathering</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="eventDate" className="block text-sm font-medium text-gray-700 mb-1">Tentative Date</label>
-                <input 
-                  type="date" 
-                  id="eventDate" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon"
-                />
-              </div>
-              <div>
-                <label htmlFor="guestCount" className="block text-sm font-medium text-gray-700 mb-1">Expected Guest Count</label>
-                <input 
-                  type="number" 
-                  id="guestCount" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon"
-                />
+              <div className="p-6">
+                <div className="flex items-center text-gold mb-2">
+                  <CalendarDays className="h-5 w-5 mr-2" />
+                  <span className="font-medium">December 31, 2025</span>
+                </div>
+                <h3 className="font-serif text-xl mb-2">New Year's Eve Gala</h3>
+                <p className="text-gray-600 mb-4">
+                  Ring in the New Year with an elegant dinner, live music, dancing, and midnight champagne toast.
+                </p>
+                <Link to="/contact" className="text-maroon font-medium hover:text-maroon-dark inline-block">
+                  View Details
+                </Link>
               </div>
             </div>
             
-            <div className="mb-6">
-              <label htmlFor="requirements" className="block text-sm font-medium text-gray-700 mb-1">Special Requirements</label>
-              <textarea 
-                id="requirements" 
-                rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon"
-              ></textarea>
+            <div className="bg-ivory rounded-lg overflow-hidden shadow-md">
+              <div className="h-48">
+                <img 
+                  src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=2080" 
+                  alt="Food & Wine Festival" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center text-gold mb-2">
+                  <CalendarDays className="h-5 w-5 mr-2" />
+                  <span className="font-medium">February 15-16, 2025</span>
+                </div>
+                <h3 className="font-serif text-xl mb-2">Food & Wine Festival</h3>
+                <p className="text-gray-600 mb-4">
+                  Experience culinary delights and fine wines from across India in our weekend gastronomy celebration.
+                </p>
+                <Link to="/contact" className="text-maroon font-medium hover:text-maroon-dark inline-block">
+                  View Details
+                </Link>
+              </div>
             </div>
             
-            <button 
-              type="submit" 
-              className="w-full bg-maroon hover:bg-maroon-dark text-white py-3 rounded-md transition-colors duration-300 font-medium"
-            >
-              Submit Inquiry
-            </button>
-          </form>
+            <div className="bg-ivory rounded-lg overflow-hidden shadow-md">
+              <div className="h-48">
+                <img 
+                  src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=2070" 
+                  alt="Wedding Showcase" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center text-gold mb-2">
+                  <CalendarDays className="h-5 w-5 mr-2" />
+                  <span className="font-medium">March 8, 2025</span>
+                </div>
+                <h3 className="font-serif text-xl mb-2">Wedding Showcase</h3>
+                <p className="text-gray-600 mb-4">
+                  Meet wedding vendors, explore our venues, and sample menu options at our bridal exhibition.
+                </p>
+                <Link to="/contact" className="text-maroon font-medium hover:text-maroon-dark inline-block">
+                  View Details
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -435,13 +429,13 @@ const EventsPage = () => {
       <section className="py-20 bg-maroon">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-            Let's Plan Your Next Event
+            Ready to Plan Your Event?
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact our dedicated events team to make your occasion special and memorable.
+            Contact our events team to discuss your requirements and let us help create an unforgettable experience.
           </p>
           <Link to="/contact" className="bg-gold hover:bg-gold-dark text-charcoal px-8 py-3 rounded-lg font-medium transition-colors duration-300">
-            Contact Events Team
+            Request a Proposal
           </Link>
         </div>
       </section>
