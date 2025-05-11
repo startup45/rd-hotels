@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Bed, Wifi, Clock, Users } from 'lucide-react';
 
-// Room data
+// Room data with updated image URLs
 const rooms = [
   {
     id: 'deluxe-ac',
@@ -13,7 +13,7 @@ const rooms = [
     capacity: 2,
     size: '325 sq ft',
     amenities: ['Air Conditioning', 'Free Wi-Fi', 'Flat-screen TV', 'Private Bathroom', 'Room Service'],
-    image: 'https://source.unsplash.com/photo-1649972904349-6e44c42644a7',
+    image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070',
     featured: true,
   },
   {
@@ -24,7 +24,7 @@ const rooms = [
     capacity: 2,
     size: '500 sq ft',
     amenities: ['Air Conditioning', 'Free Wi-Fi', 'Flat-screen TV', 'Mini Bar', 'Separate Living Area', 'Premium Toiletries'],
-    image: 'https://source.unsplash.com/photo-1721322800607-8c38375eef04',
+    image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=2074',
     featured: true,
   },
   {
@@ -35,7 +35,7 @@ const rooms = [
     capacity: 2,
     size: '275 sq ft',
     amenities: ['Ceiling Fan', 'Free Wi-Fi', 'TV', 'Private Bathroom', 'Daily Housekeeping'],
-    image: 'https://source.unsplash.com/photo-1483058712412-4245e9b90334',
+    image: 'https://images.unsplash.com/photo-1595576508898-0ad5c879a061?q=80&w=2074',
     featured: false,
   },
   {
@@ -46,7 +46,7 @@ const rooms = [
     capacity: 4,
     size: '650 sq ft',
     amenities: ['Air Conditioning', 'Free Wi-Fi', 'Flat-screen TVs', 'Mini Bar', 'Connecting Rooms', 'Family Toiletries'],
-    image: 'https://source.unsplash.com/photo-1472396961693-142e6e269027',
+    image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070',
     featured: true,
   },
 ];
@@ -62,12 +62,12 @@ const RoomsPage = () => {
 
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section with fixed image URL */}
       <section className="relative py-32 bg-cover bg-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1483058712412-4245e9b90334')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070')`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />

@@ -10,7 +10,7 @@ const DiningPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1517248135467-4c7edcad34c4')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070')`,
           }}
         >
           <div className="absolute inset-0 bg-black/60" />
@@ -72,7 +72,7 @@ const DiningPage = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="https://source.unsplash.com/photo-1414235077428-338989a2e8c0" 
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070" 
                 alt="Suvai Restaurant" 
                 className="w-full h-96 object-cover"
               />
@@ -87,7 +87,7 @@ const DiningPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1 rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="https://source.unsplash.com/photo-1470337458703-46ad1756a187" 
+                src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=2070" 
                 alt="Chill & Chip Bar" 
                 className="w-full h-96 object-cover"
               />
