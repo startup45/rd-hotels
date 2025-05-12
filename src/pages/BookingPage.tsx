@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { format, addDays, differenceInDays } from 'date-fns';
@@ -23,7 +22,7 @@ const rooms = [
     capacity: 2,
     size: '325 sq ft',
     bedType: 'King Size or Twin',
-    image: 'https://source.unsplash.com/photo-1649972904349-6e44c42644a7',
+    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2070',
   },
   {
     id: 'executive-suite',
@@ -33,7 +32,7 @@ const rooms = [
     capacity: 2,
     size: '500 sq ft',
     bedType: 'King Size',
-    image: 'https://source.unsplash.com/photo-1721322800607-8c38375eef04',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070',
   },
   {
     id: 'standard-non-ac',
@@ -43,7 +42,7 @@ const rooms = [
     capacity: 2,
     size: '275 sq ft',
     bedType: 'Queen Size or Twin',
-    image: 'https://source.unsplash.com/photo-1483058712412-4245e9b90334',
+    image: 'https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?q=80&w=2070',
   },
   {
     id: 'family-suite',
@@ -53,7 +52,7 @@ const rooms = [
     capacity: 4,
     size: '650 sq ft',
     bedType: 'King Size + Two Twin Beds',
-    image: 'https://source.unsplash.com/photo-1472396961693-142e6e269027',
+    image: 'https://images.unsplash.com/photo-1576675784201-0e142b423952?q=80&w=2070',
   },
 ];
 
@@ -93,12 +92,12 @@ const BookingPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
   
   // Step data
-  const [bookingDates, setBookingDates] = useState<BookingDates>({
+  const [bookingDates, setBookingDates] = useState({
     checkIn: new Date(),
     checkOut: addDays(new Date(), 1),
   });
   
-  const [guestDetails, setGuestDetails] = useState<GuestDetails>({
+  const [guestDetails, setGuestDetails] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -108,7 +107,7 @@ const BookingPage = () => {
     specialRequests: '',
   });
   
-  const [paymentDetails, setPaymentDetails] = useState<PaymentDetails>({
+  const [paymentDetails, setPaymentDetails] = useState({
     nameOnCard: '',
     cardNumber: '',
     expiryDate: '',
@@ -142,7 +141,7 @@ const BookingPage = () => {
   }, [selectedRoom, totalNights]);
   
   // Handle room selection
-  const handleRoomSelect = (room: typeof rooms[0]) => {
+  const handleRoomSelect = (room) => {
     setSelectedRoom(room);
     setGuestDetails(prev => ({
       ...prev,
@@ -214,7 +213,12 @@ const BookingPage = () => {
   };
 
   return (
-    <div className="pt-32 pb-16 bg-ivory min-h-screen">
+    <div className="pt-32 pb-16 bg-ivory min-h-screen" style={{ 
+      backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1562790879-dfde95df7f14?q=80&w=2065')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed' 
+    }}>
       <div className="container-custom">
         <h1 className="text-3xl md:text-4xl font-serif font-bold mb-2 text-center">Book Your Stay</h1>
         <p className="text-center text-gray-600 mb-10">Complete your booking in a few simple steps</p>

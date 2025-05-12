@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://source.unsplash.com/photo-1590381105924-c72589b9ef3f')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=2070')`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
@@ -45,7 +45,7 @@ const AboutPage = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="https://source.unsplash.com/photo-1551776235-dde6d482980b" 
+                src="https://images.unsplash.com/photo-1551776235-dde6d482980b?q=80&w=2070" 
                 alt="RD Hotels Lobby" 
                 className="w-full h-auto"
               />
@@ -120,7 +120,7 @@ const AboutPage = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="https://source.unsplash.com/photo-1488426862026-3ee34a7d66df" 
+                  src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=2070" 
                   alt="Deepa Ramachandran" 
                   className="w-full h-full object-cover"
                 />
@@ -137,7 +137,7 @@ const AboutPage = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="https://source.unsplash.com/photo-1560250097-0b93528c311a" 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2070" 
                   alt="Arun Kumar" 
                   className="w-full h-full object-cover"
                 />
@@ -154,7 +154,7 @@ const AboutPage = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="https://source.unsplash.com/photo-1573496359142-b8d87734a5a2" 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2070" 
                   alt="Priya Subramaniam" 
                   className="w-full h-full object-cover"
                 />
@@ -256,7 +256,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img 
-                src="https://source.unsplash.com/photo-1593113630400-ea4288922497" 
+                src="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=2070" 
                 alt="Community Involvement" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />

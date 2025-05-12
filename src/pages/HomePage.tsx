@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { CalendarRange, Utensils, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const HomePage = () => {
   // Testimonials data
@@ -29,6 +30,42 @@ const HomePage = () => {
       comment: 'My wife and I had a wonderful anniversary celebration at RD Hotels. The special arrangements were perfect.',
       rating: 4,
     },
+  ];
+
+  // Tab data for the key areas of the hotel
+  const tabsData = [
+    {
+      id: "gallery",
+      title: "Gallery",
+      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070",
+      description: "Browse through our stunning collection of hotel images showcasing our elegant rooms, dining areas, event spaces, and amenities.",
+      link: "/gallery",
+      linkText: "View Gallery"
+    },
+    {
+      id: "about",
+      title: "About Us",
+      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2070",
+      description: "Learn about our journey, values, and commitment to excellence in the hospitality industry since 2005.",
+      link: "/about",
+      linkText: "Our Story"
+    },
+    {
+      id: "contact",
+      title: "Contact",
+      image: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074",
+      description: "Get in touch with our team for inquiries, feedback, or assistance with your booking or special requirements.",
+      link: "/contact",
+      linkText: "Contact Us"
+    },
+    {
+      id: "booking",
+      title: "Book Now",
+      image: "https://images.unsplash.com/photo-1562790879-dfde95df7f14?q=80&w=2065",
+      description: "Reserve your stay at RD Hotels and experience our exceptional service, luxury amenities, and comfortable accommodations.",
+      link: "/booking",
+      linkText: "Book Your Stay"
+    }
   ];
 
   return (
@@ -179,8 +216,53 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Tabs Section */}
       <section className="py-16 bg-ivory">
+        <div className="container-custom">
+          <h2 className="section-title text-center mx-auto mb-8">Explore RD Hotels</h2>
+          
+          <Tabs defaultValue="gallery" className="w-full">
+            <TabsList className="w-full flex justify-center mb-8 bg-transparent space-x-2">
+              {tabsData.map(tab => (
+                <TabsTrigger 
+                  key={tab.id} 
+                  value={tab.id}
+                  className="py-2 px-4 data-[state=active]:bg-maroon data-[state=active]:text-white"
+                >
+                  {tab.title}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            
+            {tabsData.map(tab => (
+              <TabsContent key={tab.id} value={tab.id} className="mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <div className="rounded-lg overflow-hidden shadow-lg">
+                    <img 
+                      src={tab.image} 
+                      alt={tab.title} 
+                      className="w-full h-64 md:h-96 object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-serif font-bold mb-4">{tab.title}</h3>
+                    <p className="text-gray-700 mb-6">{tab.description}</p>
+                    <Link 
+                      to={tab.link} 
+                      className="bg-maroon hover:bg-maroon-dark text-white px-6 py-3 rounded transition-colors duration-300 inline-block"
+                    >
+                      {tab.linkText}
+                    </Link>
+                  </div>
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 bg-white">
         <div className="container-custom">
           <h2 className="section-title text-center mx-auto">Guest Experiences</h2>
           
@@ -189,7 +271,7 @@ const HomePage = () => {
               <CarouselContent>
                 {testimonials.map((testimonial) => (
                   <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="h-full p-6 bg-white rounded-lg shadow-md">
+                    <div className="h-full p-6 bg-ivory rounded-lg shadow-md">
                       <div className="flex mb-4">
                         {[...Array(5)].map((_, i) => (
                           <svg
